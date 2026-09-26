@@ -489,8 +489,13 @@ models/feature_metadata.json
 Run the application with:
 
 ```bash
+python sklearn_pipline.py
 streamlit run app.py
 ```
+
+The training script tunes the candidate pipelines and saves the one with the
+highest cross-validation R² to `models/best_model.joblib`. The Streamlit form
+loads that fitted pipeline and passes the student's raw feature values to it.
 
 The application should:
 
